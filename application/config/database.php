@@ -64,10 +64,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'xlol',
+	'hostname' => 'mysql.inserthost.com.br',
+	'username' => 'inserthost07',
+	'password' => 'adminxlol',
+	'database' => 'inserthost07',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
