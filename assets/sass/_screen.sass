@@ -1,0 +1,344 @@
+body
+	height: 100%
+a:hover, a:focus
+	color: #00bfa5
+	text-decoration: none
+.card-panel
+	@extend .z-depth-2
+//////////////////////
+/// TIPOGRAFIA
+//////////////////////
+h6
+	font-family: $lato
+
+
+/////////////////////
+// MENU PRINCIPAL
+////////////////////
+.menu
+	margin-top: 15%
+	margin-bottom: 30px
+	.menu-standard
+		border-bottom: 2px solid $verde-padrao
+		li
+			a
+				color: $verde-escuro
+				&:hover
+					text-decoration: none
+			&:hover, &.active
+				background-color: rgba(0, 110, 18, 0.42)
+		.search
+			background-color: $color1
+			.icon-search
+				@extend .glyphicon-search
+		.search.search-open
+			@extend .z-depth-5
+			.icon-search
+				color: white
+				@extend .glyphicon-remove
+	.search-standard
+		display: none
+		opacity: 0
+		.input-field
+			margin: 8px 0
+			.form-group
+				position: relative
+				.glyphicon-search
+					position: absolute
+					color: rgb(0, 77, 64)
+					top: 15px
+					font-size: 20px
+					left: 20px
+				.btn-primary
+					position: absolute
+					top: 0px
+					right: 0px
+					border: 0
+					border-radius: 0px
+					height: 51px
+					&:focus
+						background-color: $color1-hover
+
+
+
+////////////////////
+// HOME SEARCH
+////////////////////
+.page-search
+	background: black
+	.menu-top
+		.nav-pills > li > a
+			border-radius: 0px 0px 5px 5px
+			background-color: rgba(39, 63, 59, 0.55)
+			color: white
+			&:hover
+				border: 0px 0px 5px 5px
+				background-color: $color1
+				color: white
+.bg-search
+	height: 500px
+	width: 100%
+	position: relative
+	border-bottom: 1px double rgba(38, 166, 154, 0.43)
+	.container.space
+		padding-top: 15% 
+		.search-form
+			background-color: white
+			position: relative
+			.has-feedback .form-control
+				padding-right: 0px
+			.submit
+				position: absolute
+				right: 0
+				top: 0
+				display: block
+				input
+					background-color: #26a69a
+					border: 0px
+					padding: 13.6px
+					text-align: center
+					text-indent: 0px
+					color: white
+					font-family: $ubuntu
+					text-transform: uppercase
+			input
+				text-indent: 10px
+		p 	
+			text-shadow: 0px 0px 4px black
+			color: #e0f2f1
+.champ-week
+	h6
+		color: $color1
+		font-family: $ubuntu
+		margin-top: 22%
+		text-transform: uppercase
+	.champs
+		@include transition(.3s)
+		display: block
+		list-style: none
+		li
+			width: 12% 
+			display: inline-block
+////////////////////
+// BOX PROFILE
+///////////////////
+.box-profile
+	margin: 0px
+	padding: 0px
+	.banner-sland
+		overflow: hidden
+		@extend .z-depth-1
+		img
+			max-width: 123%
+			float: right
+	.picture
+		display: block
+		height: 50px
+		img
+			position: relative
+			top: -50px
+			width: 90px
+			border: 3px solid white
+			display: block
+			margin: 0 auto
+	.info
+		padding: 0 20px 12px 20px
+		@extend .text-center
+		@extend .clearfix
+		h5
+			font-size: 20px
+			margin: 0px
+///////////////////////////
+// BOX PARTIDAS RECENTES
+///////////////////////////
+.partidas-recentes
+	margin: 0px
+	h6
+		margin-bottom: 15px
+	.space-top-1.clearfix.text-right a
+		margin-top: 13px
+.home-recentes	
+	.box-list
+		margin: 5px 0px
+		padding: 0px
+		-webkit-box-shadow: none
+		background: rgba(115, 115, 115, 0.09)
+		@extend .clearfix
+		img
+			width: 60px
+			height: 60px
+			float: left
+			margin-right: 10px
+		.info
+			float: left
+			padding: 10px 0px
+			font-family: $ubuntu
+			font-weight: 500
+			p
+				margin: 0px
+				strong
+					font-weight: 900
+
+	.vitoria
+		border-left: 5px solid  $verde-padrao
+		&:hover
+			@include transition(.3s)
+			background: $verde-padrao
+			img
+				opacity: 0.3
+			&:before
+				content: "Vitoria"
+				line-height: 40px
+				font-size: 13px
+				padding: 10px 7px
+				right: 0
+				position: absolute
+				font-weight: 900
+				margin-right: 40px
+				color: white
+				font-family: $lato
+	.derrota
+		border-left: 5px solid  #b71c1c
+		&:hover
+			@include transition(.3s)
+			background: #d32f2f
+			img
+				opacity: 0.3
+			&:before
+				content: "Derrota"
+				line-height: 40px
+				right: 0
+				font-size: 13px
+				padding: 10px 7px
+				position: absolute
+				font-weight: 900
+				margin-right: 40px
+				color: white
+				font-family: $lato
+///////////////////////////
+/// ELO
+///////////////////////////
+.elo-jogador
+	h4
+		font-family: $ubuntu
+	.info
+		margin-top: 2px
+//////////
+/// cores elos
+/////////
+.bronze
+	background-color: $bronze
+	p, h4
+		color: white
+.prata
+	background-color: $prata
+.ouro
+	background-color: $ouro
+
+////////////////////
+// TABELA STATISTICA
+////////////////////
+.panel-static
+	td
+		padding: 5px 10px
+		border: 1px solid $verde-escuro
+		.content-static
+			span
+				float: right
+				font-size: 20px
+				font-family: $ubuntu
+				@extend .space-top-2
+			p
+				font-family: $ubuntu
+				color: $verde-escuro
+/////////////////////////
+// Pagina partidas listas
+/////////////////////////
+ul.todas-partidas
+	.vitoria
+		border-left: 5px solid  $verde-padrao
+		&:hover
+			@include transition(.3s)
+			background: $verde-padrao
+			img
+				opacity: 0.3
+				color: white
+				font-family: $lato
+	.derrota
+		border-left: 5px solid  #b71c1c
+		&:hover
+			@include transition(.3s)
+			background: #d32f2f
+			img
+				opacity: 0.3
+			&:before
+				line-height: 40px
+				right: 0
+				font-size: 13px
+				padding: 10px 7px
+				position: absolute
+				font-weight: 900
+				margin-right: 40px
+				color: white
+				font-family: $lato
+	li.partida-lista
+		padding: 7px 0
+		margin: 5px 0
+		border-top: 2px solid rgba(200, 200, 200, 0.16)
+		border-bottom: 2px solid rgba(200, 200, 200, 0.16)
+		background: rgb(240, 240, 240)
+		a
+			.row
+				margin-bottom: 0px
+			.img-campeao
+				@extend .col-lg-1
+				@extend .text-center
+
+			.name-campeao
+				@extend .col-lg-2
+				@extend .no-padding
+				font-family: $ubuntu
+				p
+					color: $verde-escuro
+			.static-campeao
+				@extend .text-center
+				@extend .col-lg-2
+				font-family: $ubuntu
+				font-weight: 500
+				p
+					color: $verde-escuro
+			.item-campeao
+				@extend .col-lg-5
+				margin-top: 5px
+				color: #80cbc4
+			.date-campeao
+				@extend .col-lg-2
+				@extend .text-right
+				font-family: $lato
+				font-weight: 400
+				padding-right: 3%
+				p
+					color: $verde-escuro
+	li p
+		margin: 0px
+
+///////////////////////////
+// MODAL
+///////////////////////////
+.modal
+	width: 70%
+	border: 4px solid $verde-padrao
+	.modal-footer
+		background-color: $verde-padrao
+		a
+			color: white
+
+///////////////////////////
+// SPAÇO DO TOPO
+///////////////////////////
+.no-margin
+	margin: 0
+@for $i from 1 through 10
+	.space-top-#{$i}
+		margin-top: 10px * $i
+

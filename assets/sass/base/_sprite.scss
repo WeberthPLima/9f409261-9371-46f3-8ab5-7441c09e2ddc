@@ -1,0 +1,9 @@
+$ico-spacing:30px;
+@import "ico/*.png";
+
+@include all-ico-sprites(true);
+
+.ico {
+	display: inline-block;
+}
+
